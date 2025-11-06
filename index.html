@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <h2 class="text-center">Calcola il prezzo del tuo biglietto</h2>
+    <div class="container">
+        <form action="">
+            <div class="row mt-5">
+                <div class="col-4">
+                    <label for="utente">Nome e Cognome</label>
+                    <input type="text" id="utente">
+                </div>
+                <div class="col-4">
+                    <label for="kmPercorrere">km da percorrere</label>
+                    <input type="number" id="kmPercorrere">
+                </div>
+                <div class="col-4">
+                    <label for="eta">fascia età</label>
+                    <select class="form-select" id="eta">
+                        <option value="1">Maggiorenne</option>
+                        <option value="2">Minorenne</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+
+        <div class="row">
+            <div class="col-6">
+                <button class="btn btn-primary">Calcola</button>
+            </div>
+            <div class="col-6">
+                <button class="btn btn-danger">Annulla</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

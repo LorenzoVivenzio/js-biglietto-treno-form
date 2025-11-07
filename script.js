@@ -8,6 +8,7 @@ const passeggero = document.querySelector(".passeggero")
 const scontoBiglietto = document.querySelector(".scontoBiglietto")
 const prezzoBiglietto = document.querySelector(".prezzoBiglietto")
 let passeggeroCarrozzaElem = document.querySelector(".carrozza")
+const trainTicketElem = document.querySelector(".train-ticket")
 
 
 let scontoMin = 0.20;
@@ -23,13 +24,13 @@ form.addEventListener("submit", function (event) {
     const username = usernameInput.value;
     const kmPercorrere = kmPercorrereInput.value;
     const eta = etaInput.value;
-    
-    console.log(eta, kmPercorrere, username)
+
 
     let prezzoKmPercorsoScontoMin = (kmPercorrere * prezzoKm) * scontoMin;
     let bigliettoScontoMinori = (kmPercorrere * prezzoKm) - prezzoKmPercorsoScontoMin; //biglietto con sconto Under
     let prezzoKmPercorsoScontoOver = (kmPercorrere * prezzoKm) * scontoOver;
     let bigliettoScontoOver = (kmPercorrere * prezzoKm) - prezzoKmPercorsoScontoOver; //biglietto con sconto Over65
+    trainTicketElem.classList.remove("d-none")
 
     if (eta === "under") {
         passeggero.innerText = username;
@@ -37,17 +38,23 @@ form.addEventListener("submit", function (event) {
         prezzoBiglietto.innerHTML = bigliettoScontoMinori.toFixed(1) + "$"
         passeggeroTicket.innerHTML = username;
         passeggeroCarrozzaElem.innerHTML = Math.floor(Math.random()* 10) +1;
+        
+        
     } else if (eta === "over") {
         passeggero.innerText = username;
         scontoBiglietto.innerHTML = "40%"
         prezzoBiglietto.innerHTML = bigliettoScontoOver.toFixed(1) + "$"
         carrozza.innerHTML = Math.floor(Math.random() * 10) +1;
+        
+        
     } else if (eta === "nessunaScelta") {
         passeggero.innerText = username;
         scontoBiglietto.innerHTML = "Nessun sconto"
         prezzoBiglietto.innerHTML = (kmPercorrere * prezzoKm) + "$"
         carrozza.innerHTML = Math.floor(Math.random() * 10) +1;
+        
     }
+
 })
 
 

@@ -148,4 +148,8 @@ body{
     font-family: 'Courier New', Courier, monospace;
     font-weight: bolder;
 }
+.code-image{
+    width: 100px;
+    margin: 20px;
+}
 

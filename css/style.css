@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+
+body{
+    background-image: url(../img/ferrovia.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+.card{
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 20px;
+    background-color: rgba(42, 42, 42, 0.882);
+}
+
+
+.inviaDati{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.btn-lv{
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    color: white;
+    background-color: cornflowerblue;
+}
+.image{
+    width: 80%;
+}
+:root {
+    --arancione-scuro: #d0663a;
+    --beige-chiaro: #f5eedd;
+    --grigio-bordo: #ccc;
+}
+
+.train-ticket {
+    width: 500px;
+    height: 250px;
+    margin: 50px auto;
+    display: flex;
+    position: relative;
+    background-color: var(--beige-chiaro);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.train-ticket::before,
+.train-ticket::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    background: rgba(42, 42, 42, 0.78);
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.train-ticket::before {
+    left: -10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.train-ticket::after {
+    right: -10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+
+.ticket-header {
+    background-color: var(--arancione-scuro);
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.ticket-body {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 70%;
+    height: calc(100% - 30px);
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.ticket-stub {
+    position: absolute;
+    top: 30px;
+    left: 70%;
+    width: 30%;
+    height: calc(100% - 30px);
+    border-left: 2px dashed var(--grigio-bordo);
+    box-sizing: border-box;
+}
+
+.ticket-body::before {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.ticket-stub::after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: rgba(11, 11, 11, 0.697);
+    border-radius: 50%;
+    z-index: 2;
+}
+.text-lv{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
